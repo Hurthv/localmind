@@ -29,7 +29,7 @@ async def export_session(session_id: str, fmt: ExportFormat):
     elif fmt == ExportFormat.markdown:
         lines = [f"# {title}\n", f"*Exported: {ts} | Model: {session.get('model','?')}*\n\n---\n"]
         for m in messages:
-            role_label = "**You**" if m["role"] == "user" else "**LocalMind 🧠**"
+            role_label = "**You**" if m["role"] == "user" else "**LocalMind**"
             lines.append(f"{role_label}\n\n{m['content']}\n")
             if m.get("sources"):
                 lines.append(f"*Sources: {', '.join(m['sources'])}*\n")
