@@ -187,9 +187,9 @@ export default function Sidebar({
               {isPinned ? "Unpin chat" : "Pin chat"}
             </span>
           </button>
-
+          
           <button
-            onClick={() => {setDeleteConfirm({ sessionId: s.id, sessionName: s.title }); setClearAllConfirm(false); }}
+            onClick={() => { setDeleteConfirm({ sessionId: s.id, sessionName: s.title }); setClearAllConfirm(false); }}
             aria-label="Delete chat"
             className="relative group/del opacity-0 group-hover:opacity-100 text-gray-500 hover:text-red-400 px-1.5 py-2 transition text-sm font-medium shrink-0"
           >
